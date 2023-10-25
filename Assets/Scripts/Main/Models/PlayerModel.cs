@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerModel 
 {
-    public PlayerView PlayerView;
+    public BaseView PlayerView;
     public float maxMovementSpeed = 2.0f;
     public float accelerationRate = 0.04f;
     public float inertiaRate = 0.03f;

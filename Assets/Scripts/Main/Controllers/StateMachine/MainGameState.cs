@@ -23,7 +23,7 @@ public class MainGameState : GameState
         m_controllersManager.AddController(new MainUIController(uiRoot, m_mainUIModel));
         m_controllersManager.AddController(new PlayerController(m_playerInputActions.PlayerMovement, poolsManager, m_playerModel, m_mainUIModel, this));
         m_controllersManager.AddController(new GunController(m_playerInputActions.PlayerMovement, m_shootingModel));
-        m_controllersManager.AddController(new ShootingController(m_playerModel.PlayerView, poolsManager, m_shootingModel, m_mainUIModel));
+        m_controllersManager.AddController(new ShootingController(m_playerModel, poolsManager, m_shootingModel, m_mainUIModel));
         m_controllersManager.AddController(new EnemiesController(poolsManager, m_playerModel, m_enemiesModel));
     }
 }

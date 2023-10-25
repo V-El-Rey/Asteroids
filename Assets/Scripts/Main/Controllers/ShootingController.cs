@@ -17,12 +17,12 @@ public class ShootingController : IBaseController, IEnterController, IExitContro
     private float m_laserWorkTime;
     private float m_laserCooldownTime;
 
-    public ShootingController(PlayerView playerView, PoolsManager poolsManager, ShootingModel shootingModel, MainUIModel mainUIModel)
+    public ShootingController(PlayerModel playerModel, PoolsManager poolsManager, ShootingModel shootingModel, MainUIModel mainUIModel)
     {
         m_poolsManager = poolsManager;
         m_shootingModel = shootingModel;
         m_mainUIModel = mainUIModel;
-        m_playerView = playerView;
+        m_playerView = playerModel.PlayerView as PlayerView;
         m_bullets = new List<BaseView>();
         m_indexesToRemove = new HashSet<int>();
         m_shootingModel.laserShotsLeft = m_shootingModel.maximumLaserShots;

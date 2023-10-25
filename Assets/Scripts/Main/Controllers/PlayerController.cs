@@ -9,6 +9,7 @@ public class PlayerController : IBaseController, IUpdateController, IEnterContro
     private PlayerInputActions.PlayerMovementActions m_playerMovementActions;
 
     private PlayerModel m_playerModel;
+    private PlayerView m_playerView;
     private MainUIModel m_mainUIModel;
 
     private float m_movementSpeed;
@@ -25,6 +26,7 @@ public class PlayerController : IBaseController, IUpdateController, IEnterContro
         m_poolsManager = poolsManager;
         m_playerMovementActions = movementActions;
         m_playerModel = playerModel;
+        m_playerView = playerModel.PlayerView as PlayerView;
         m_mainUIModel = mainUIModel;
         screenHeight = Screen.height;
         screenWidth = Screen.width;
@@ -35,7 +37,7 @@ public class PlayerController : IBaseController, IUpdateController, IEnterContro
         m_playerModel.PlayerView.objectTransform.position = Vector3.zero;
         m_playerMovementActions.Enable();
         m_movementSpeed = 0.0f;
-        m_playerModel.PlayerView.onPlayerCollision += OnPlayerCollisionHandler;
+        m_playerView.onPlayerCollision += OnPlayerCollisionHandler;
     }
 
     private void OnPlayerCollisionHandler(string tag)
