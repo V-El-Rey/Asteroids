@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd76f7288179cdb46b6645ffd8cb1437, type: 3}
+  m_Name: PoolConfiguration
+  m_EditorClassIdentifier: 
+  poolObjects:
+  - objectName: Asteroid_big
+    initialCount: 1
+    maxCount: 10
+    view: {fileID: 4378273419016212821, guid: bf76c82f1754fd045b081a9ef52bc714, type: 3}
+  - objectName: Asteroid_medium
+    initialCount: 1
+    maxCount: 20
+    view: {fileID: 2045947354838528669, guid: ca540dc14873ec640955d65cc5037dc6, type: 3}
+  - objectName: Asteroid_small
+    initialCount: 1
+    maxCount: 30
+    view: {fileID: 5401423615178106855, guid: 291bac45a8e5d6f458bef8145a883cc8, type: 3}
+  - objectName: Bullet
+    initialCount: 15
+    maxCount: 100
+    view: {fileID: 1216543650477423502, guid: 864b42edf6745204b89a4c27e21893d8, type: 3}
+  - objectName: Laser
+    initialCount: 1
+    maxCount: 5
+    view: {fileID: 8985079235376962507, guid: 1050813ae23d5f340a99fef23ca7830d, type: 3}
+  - objectName: UFO
+    initialCount: 2
+    maxCount: 5
+    view: {fileID: 7235370079419100668, guid: 31de4cb25a5eab2438896e10804663cf, type: 3}
+  - objectName: Player
+    initialCount: 1
+    maxCount: 1
+    view: {fileID: 289556020963514391, guid: f8f05d4809d63664f81f247c2c6f7639, type: 3}
